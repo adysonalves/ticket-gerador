@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+    --font-padrao: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    font-family: var(--font-padrao);
+    font-weight: 400;
+    font-size: 1rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.area-impresssao {
+    width: 58mm;
+    height: auto;
+    border: 1px dotted lightgrey;
+    background-color: #fff8d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+img {
+    width: 50%;
+}
+
+h2 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+p.codigo {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+p.info-codigo {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+p.info-evento {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+span.info {
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+button{
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 58mm;
+}
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    .area-impresssao {
+      visibility: visible;
+    }
+
+    h2, p, img, svg{
+        visibility: visible;
+    }
+
+    p.codigo{
+        visibility: visible;
+    }
+
+    p.info{
+        visibility: visible;
+    }
+
+    p.info-codigo, p.info-evento{
+        visibility: visible;
+    }
+
+    span.info{
+        visibility: visible;
+    }
+  }
+
+  span.footer {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #a3a3a3;
+    padding: 10px 0;
+}

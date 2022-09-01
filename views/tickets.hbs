@@ -1,0 +1,18 @@
+{{>nav}}
+
+<main class="container">
+    <h2>novo ticket</h2>
+    <form action="/painel/new-ticket" method="post">
+
+    <div class="row">
+        <select name="evento" id="nome" required>
+            <option value="" disabled selected>Selecione um evento</option>
+            {{#each dados}}
+            <option value="{{id}}">{{evento}} - R${{valor}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <button type="submit">Gerar ticket</button>
+    </form>
+
+</main>

@@ -1,0 +1,28 @@
+{{>nav}}
+
+<main class="container">
+    <h2>Adicionar usuário</h2>
+    <form action="/painel/update-user" method="post">
+
+    <div class="row">
+        <input type="hidden" name="id" value="{{id}}">
+        <input type="text" name="username" id="username" placeholder="Username" value="{{username}}" required>
+    </div>
+
+    <div class="row">
+        <input type="password" name="senha" id="senha" placeholder="Nova senha" required>
+    </div>
+
+    <div class="row">
+        <select name="tipo_user" id="tipo_user" required>
+            <option value="{{tipo_user}}" disabled selected>Selecione o tipo</option>
+            <option value="1">Administrador</option>
+            <option value="2">Operador</option>
+            <option value="3">Validador</option>
+        </select>
+    </div>
+
+    <button type="submit">Salvar alterações</button>
+    </form>
+
+</main>

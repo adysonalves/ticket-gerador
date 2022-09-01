@@ -1,0 +1,31 @@
+<div class="area-impresssao">
+    <img src="" alt="">
+    <h2>INGRESSO</h2>
+    <p class="info-codigo">Código do ticket</p>
+    <strong><p class="codigo">{{codigo}}</p></strong>
+
+    <p>-----------------</p>
+
+    <p class="info-codigo">Evento</p>
+    <p class="info-evento">{{evento}}</p>
+
+    <p class="info-codigo">Valor do ingresso</p>
+    <p class="info-evento valor-ingresso">R$ {{valor_ingresso}}</p>
+    
+    <p>-----------------</p>
+    <span class="info">Este ticket é de uso único. <br> Após a utilização o mesmo será inutilizado.</span>
+    <br>.<br>.<br>.<br>.<br>
+</div>
+
+<script>window.print();</script>
+
+<button onclick="window.print()">Imprimir</button>
+<br>
+<form action="/painel/estornar-ticket" method="post">
+<input type="hidden" name="codigo" value="{{codigo}}">
+<button type="submit">Estornar ticket</button>
+</form>
+<br>
+<a onclick="window.location.reload()"><button>+ 1 ticket</button></a>
+<br>
+<a href="/painel"><button>Retornar ao painel</button></a>

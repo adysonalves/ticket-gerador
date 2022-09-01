@@ -1,0 +1,70 @@
+{{>nav}}
+
+<main class="container">
+    <h2>Adicionar usuário</h2>
+    {{#if mensagem}}
+    <div class="alert {{classAlert}}">{{mensagem}}</div>
+    {{else}}
+    {{/if}}
+    <form action="/painel/add-user" method="post">
+
+    <div class="row">
+        <input type="text" name="username" id="username" placeholder="Username" required>
+    </div>
+
+    <div class="row">
+        <input type="password" name="senha" id="senha" placeholder="Senha" required>
+    </div>
+
+    <div class="row">
+        <select name="tipo_user" id="tipo_user" required>
+            <option value="" disabled selected>Selecione o tipo</option>
+            <option value="1">Administrador</option>
+            <option value="2">Operador</option>
+            <option value="3">Validador</option>
+        </select>
+    </div>
+
+    <button type="submit">Cadastrar</button>
+    </form>
+
+</main>
+
+<br><br>
+
+<main class="container">
+<h2>Lista de usuários</h2>
+{{#if table}}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each dados}}
+            <tr>
+                <td>{{username}}</td>
+                <td class="acoes">
+                    <form action="/painel/edit-user" method="post">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <button type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    </form>
+                    
+
+                    <form action="/painel/del-user" method="post">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                    
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <p>Nenhum usuário cadastrado...</p>
+{{/if}}
+
+</main>

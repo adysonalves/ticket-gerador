@@ -1,0 +1,21 @@
+<main class="container">
+    <h2>Entrar no sistema</h2>
+    {{#if mensagem}}
+    <div class="alert {{classAlert}}">{{mensagem}}</div>
+    {{else}}
+    {{/if}}
+    {{>_msg}}
+    <form action="/" method="post">
+
+    <div class="row">
+        <input type="text" name="username" id="username" placeholder="Username" required>
+    </div>
+
+    <div class="row">
+        <input type="password" name="senha" id="senha" placeholder="Senha" required>
+    </div>
+
+    <button type="submit">Entrar</button>
+    </form>
+
+</main>

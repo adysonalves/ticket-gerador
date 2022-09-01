@@ -1,0 +1,33 @@
+{{>nav}}
+
+<main class="container">
+    <h2>Estornar ticket</h2>
+    {{#if mensagem}}
+    <div class="alert {{classAlert}}">{{mensagem}}</div>
+    {{else}}
+    {{/if}}
+    <form action="/painel/del-ticket" method="post">
+
+    <div class="row">
+        <input type="number" name="codigo" value="{{codigo_ticket}}" autofocus>
+    </div>
+
+    <div class="row">
+        <select name="id" id="username" required>
+            <option value="" selected>Selecione um administrador</option>
+            {{#each users}}
+            <option value="{{id}}">{{username}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="row">
+        <input type="password" name="senha" placeholder="Senha administrador">
+    </div>
+
+    <button type="submit">Estornar</button>
+    </form>
+
+    <a href="/painel"><i class="fa-solid fa-arrow-left"></i> Retornar ao painel</a>
+
+</main>

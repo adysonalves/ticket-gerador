@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+    --font-padrao: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    font-family: var(--font-padrao);
+    font-weight: 400;
+    font-size: 1rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #223242;
+    position: relative;
+}
+
+main.container {
+    width: 350px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(8, 8, 8, 1);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(8, 8, 8, 1);
+    box-shadow: 0px 0px 50px 0px rgba(8, 8, 8, 1);
+}
+
+main.container h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+main.container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.row input {
+    width: 100%;
+    font-family: var(--font-padrao);
+    font-size: 1rem;
+    height: 35px;
+    padding: 15px;
+    background-color: rgb(241, 241, 241);
+    border: 0;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 0px 20px -5px rgba(163, 163, 163, 1);
+    -moz-box-shadow: inset 0px 0px 20px -5px rgba(163, 163, 163, 1);
+    box-shadow: inset 0px 0px 20px -5px rgba(163, 163, 163, 1);
+}
+
+main.container form button{
+    width: 100%;
+    font-size: 1rem;
+    height: 35px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-family: var(--font-padrao);
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+}
+
+main.container a{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+main.container a:hover{
+    text-decoration: underline;
+}
+
+.alert {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ffa8a8;
+    margin: 0px 0px 10px 0px;
+    font-size: 0.9rem;
+}
+
+.danger{
+    background-color: #ffdfdf;
+    color: #bb7878;
+}
+
+span.footer {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #a3a3a3;
+    position: absolute;
+    bottom: 80px;
+}

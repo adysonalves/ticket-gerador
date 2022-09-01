@@ -1,0 +1,64 @@
+{{>nav}}
+
+<main class="container">
+    <h2>Adicionar novo evento</h2>
+    {{#if mensagem}}
+    <div class="alert {{classAlert}}">{{mensagem}}</div>
+    {{else}}
+    {{/if}}
+    {{>_msg}}
+    <form action="/painel/add-tipo" method="post">
+
+    <div class="row">
+        <input type="text" name="evento" id="evento" placeholder="Evento" required>
+    </div>
+
+    <div class="row">
+        <input type="text" name="valor" id="valor" placeholder="Valor do ingresso" required>
+    </div>
+
+    <button type="submit">Cadastrar</button>
+    </form>
+
+</main>
+
+<br><br>
+
+<main class="container">
+    <h2>Lista de eventos</h2>
+   {{#if table}}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Evento</th>
+                <th>Valor do ingresso</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each dados}}
+            <tr>
+                <td>{{evento}}</td>
+                <td class="valorEvento">R$ {{valor}}</td>
+                <td class="acoes">
+                    <form action="/painel/edit-evento" method="post">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <button type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    </form>
+                    
+
+                    <form action="/painel/del-evento" method="post">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                    
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <p>Nenhum evento cadastrado...</p>
+{{/if}}
+
+</main>

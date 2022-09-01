@@ -1,0 +1,61 @@
+{{>nav}}
+
+{{#if type_admin}}
+
+<a href="/painel/cadastrar-tipo">
+    <button class="item">
+        Cadastrar evento
+    </button>
+</a>
+
+<a href="/painel/novo-ticket">
+    <button class="item">
+        Gerar ticket
+    </button>
+</a>
+
+<a href="/painel/estornar-ticket">
+    <button class="item">
+        Estornar ticket
+    </button>
+</a>
+
+<a href="/painel/validador">
+    <button class="item">
+        Validar ticket
+    </button>
+</a>
+
+<a href="/painel/usuarios">
+    <button class="item">
+        Usuários
+    </button>
+</a>
+
+{{/if}}
+
+{{#if type_operador}}
+
+<a href="/painel/novo-ticket">
+    <button class="item">
+        Gerar ticket
+    </button>
+</a>
+
+<a href="/painel/validador">
+    <button class="item">
+        Validar ticket
+    </button>
+</a>
+
+{{/if}}
+
+{{#if type_validador}}
+
+<a href="/painel/validador">
+    <button class="item">
+        Validar ticket
+    </button>
+</a>
+
+{{/if}}

@@ -1,0 +1,21 @@
+{{>nav}}
+
+<main class="container">
+    <h2>Editar evento</h2>
+    <form action="/painel/editar-evento" method="post">
+
+    <div class="row">
+        <input type="hidden" name="id" value="{{id}}">
+        <input type="text" name="evento" id="evento" placeholder="Evento" value="{{evento}}" required>
+    </div>
+
+    <div class="row">
+        <input type="text" name="valor" id="valor" placeholder="Valor do ingresso" value="{{valor}}" required>
+    </div>
+
+    <button type="submit">Salvar alterações</button>
+    </form>
+
+</main>
+
+<br><br>
