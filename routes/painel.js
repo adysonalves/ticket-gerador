@@ -244,7 +244,6 @@ router.post('/add-tipo', async (req, res) => {
         evento: evento,
         valor: valor
     }).then(success => {
-        console.log('Novo tipo adicionado');
         req.flash('mensagem', 'Novo evento adicionado com sucesso!')
         return res.redirect('/painel/cadastrar-tipo');
     }).catch(err => {
@@ -305,7 +304,6 @@ router.post('/new-ticket', async (req, res) => {
         codigo: codigo,
         evento: evento
     }).then(sucess => {
-        console.log('Novo ticket criado!');
         Tipo.findByPk(evento).then(dados => {
             res.render('imprimir-ticket', {
                 title: 'Impressão de ticket',
