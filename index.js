@@ -42,9 +42,7 @@ app.use(express.urlencoded({extended: false}));
 // ROTAS EXPOSTADAS
 const principal = require('./routes/principal');
 const painel = require('./routes/painel');
-app.use((req,res,next) => {
-    res.redirect('/');
-});
+
 
 
 // MIDDLEWARES
@@ -54,7 +52,11 @@ app.use('/painel', (req,res,next) => {
         return res.redirect('/')
     }
     next()
-})
+});
+
+app.use((req,res,next) => {
+    res.redirect('/');
+});
 
 //ROTAS
 app.use('/', principal);
