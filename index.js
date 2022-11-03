@@ -52,11 +52,11 @@ app.use('/painel', (req,res,next) => {
         return res.redirect('/')
     }
     next()
-});
+})
 
 app.use((req,res,next) => {
-    res.redirect('/');
-})
+    res.status(404).send('Página não encontrada...');
+});
 
 //ROTAS
 app.use('/', principal);
