@@ -56,7 +56,7 @@ app.use('/painel', (req,res,next) => {
 
 app.use((req,res,next) => {
     res.redirect('/');
-});
+})
 
 //ROTAS
 app.use('/', principal);
