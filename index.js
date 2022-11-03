@@ -42,6 +42,9 @@ app.use(express.urlencoded({extended: false}));
 // ROTAS EXPOSTADAS
 const principal = require('./routes/principal');
 const painel = require('./routes/painel');
+app.use((req,res,next) => {
+    res.status(404).send('Página não encontrada...')
+});
 
 
 // MIDDLEWARES
